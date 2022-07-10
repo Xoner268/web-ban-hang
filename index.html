@@ -13,56 +13,136 @@
     
 </head>
 <body>
+    
+    <header>
+        <a href="#" class="brand"><img src="./image/1633685732436.gif" style="width: 50%; border-radius: 50%;"></a>
+        <div class="menu">
+          <div class="btn1">
+            <i class="fas fa-times close-btn"></i>
+          </div>
+          <a href="#">Home</a>
+          <a href="#">Tags</a>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <a href="#">Account</a>
+        </div>
+        <div class="btn1">
+          <i class="fas fa-bars menu-btn1"></i>
+        </div>
+      </header>
+      <script type="text/javascript">
+      //javascript for navigation bar effect on scroll
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+      });
+  
+      //javascript for responsive navigation sidebar menu
+      var menu = document.querySelector('.menu');
+      var menuBtn = document.querySelector('.menu-btn');
+      var closeBtn = document.querySelector('.close-btn');
+  
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add('active');
+      });
+  
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove('active');
+      });
+      </script>
     <div class="header">
         <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="https://media.discordapp.net/attachments/810889408513310721/994547782796967976/unknown.png?width=352&height=432" width="100px" alt="">
-                </div>
-                <nav><ul> 
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Products</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Account</a></li>
-                </ul></nav>
-                <img src="./image/B01CJ05PXA.01.S001.LXXXXXXX.jpg" width="30px" height="30px" alt="">
-            </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Give Your A New Books</h1>
-                    <p></p>
-                    <a href="" class="btn">Expflore Now &#8594;</a>
+                    <h1>Mua sách đi</h1>
+                    <p style="margin-left: 60px ;" >Không mua bắn á</p>
+                    <img src="https://cdn.discordapp.com/emojis/777582633445228554.webp?size=80&quality=lossless" alt="">
+                    <img src="https://cdn.discordapp.com/emojis/777582633445228554.webp?size=80&quality=lossless" alt="">
+                    <img src="https://cdn.discordapp.com/emojis/777582633445228554.webp?size=80&quality=lossless" alt="">
+                    <a style="margin-left: -220px; " href="" class="btn">Mua ở đây này &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
+                    <div class="slider">
+                        <div class="slides">
+                          <!--radio buttons start-->
+                          <input type="radio" name="radio-btn" id="radio1">
+                          <input type="radio" name="radio-btn" id="radio2">
+                          <input type="radio" name="radio-btn" id="radio3">
+                          <input type="radio" name="radio-btn" id="radio4">
+                          <!--radio buttons end-->
+                          <!--slide images start-->
+                          <div class="slide first">
+                            <img src="https://cdn-amz.woka.io/images/I/51wZMSMOqXL.jpg" alt="">
+                          </div>
+                          <div class="slide">
+                            <img src="https://product.hstatic.net/200000343865/product/19_14726316fc714c3e923c4656878fe33a_master.jpg" alt="">
+                          </div>
+                          <div class="slide">
+                            <img src="https://product.hstatic.net/200000343865/product/25_bba4184abe3f4f2da1c31970ebbbebd2_master.jpg" alt="">
+                          </div>
+                          <div class="slide">
+                            <img src="https://product.hstatic.net/200000343865/product/16_c8b048a415b142ca9f0f77108e92a67d_master.jpg" alt="">
+                          </div>
+                          <!--slide images end-->
+                          <!--automatic navigation start-->
+                          <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                          </div>
+                          <!--automatic navigation end-->
+                        </div>
+                        <!--manual navigation start-->
+                        <div class="navigation-manual">
+                          <label for="radio1" class="manual-btn"></label>
+                          <label for="radio2" class="manual-btn"></label>
+                          <label for="radio3" class="manual-btn"></label>
+                          <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!--manual navigation end-->
+                      </div>
+                      <!--image slider end-->
+                    
+                      <script type="text/javascript">
+                      var counter = 1;
+                      setInterval(function(){
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if(counter > 4){
+                          counter = 1;
+                        }
+                      }, 5000);
+                      </script>
                 </div>
             </div>
         </div>
     </div>
     <!--  -->
+    <!--  -->
     <div class="categories">
         <div class="small-container">
             <div class="row">
                 <div class="col-3">
-                    <img src="./image/B01CJ05PXA.01.S001.LXXXXXXX.jpg" alt="">
+                    <img src="https://product.hstatic.net/200000343865/product/7_706f8f5abefc46e59a66acf764190517_master.jpg" alt="">
                 </div>
                 <div class="col-3">
-                    <img src="./image/B01CJ05PXA.01.S001.LXXXXXXX.jpg" alt="">
+                    <img src="https://product.hstatic.net/200000343865/product/nhat-quy-nhi-ma-thu-ba-takagi---tuyen-tap-tranh-soichiro-yamamoto_c4029b4eca384d4bbe13ccc578d6d7a4_master.jpg" alt="">
                 </div>
                 <div class="col-3">
-                    <img src="./image/B01CJ05PXA.01.S001.LXXXXXXX.jpg" alt="">
+                    <img src="https://cdn0.fahasa.com/media/catalog/product/s/h/shousetsukotonohanoniwa_1_2021_06_24_08_55_46.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
     <!--  -->
     <div class="small-container">
-        <h2 class="title">Light Novel</h2>
+        <h2 class="title">WINGS BOOKS</h2>
          <div class="row">
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1_1e473eef4b884d0eb8e112332a459e6f_master.jpg" alt="">
+                <h4>Hội chứng tuổi thanh xuân - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -70,11 +150,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>94,500₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1_787dfe738b4e46068858c1ec8a3439fa_master.jpg" alt="">
+                <h4>Thiên sứ nhà bên - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -82,11 +162,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>85,500₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1_98065a1d7fc34b9b88536d4ef2763312_master.jpg" alt="">
+                <h4>Grimgar - Ảo ảnh và tro tàn - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -94,11 +174,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>76,500₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1--lmt_4c7020c7beac468591514ccee515d0a8_master.jpg" alt="">
+                <h4>Nhân vật hạ cấp Tomozaki - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -106,14 +186,16 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>99,900₫</p>
             </div>
+            <a href="./WINGS-BOOKS"><h3><u>View more</u></h3></a>
         </div>
+        <!--  -->
         <h2 class="title">Manga</h2>
         <div class="row">
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1_3325cada89c14de086cc5d7dcad306c8_master.jpg" alt="">
+                <h4> Nhật kí tung tăng của Chi - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -121,11 +203,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>40,500₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/8_9837e2856baa4746b6a180870ccd7ece_master.jpg" alt="">
+                <h4> "Cậu" ma nhà xí Hanako - Tập 8</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -133,11 +215,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>27,000₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/1_6b1b8cb03113496f9dfb69176df6bc55_master.jpg" alt="">
+                <h4>Nhà có 5 nàng dâu - Tập 1</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -145,11 +227,11 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>22,500₫</p>
             </div>
             <div class="col-4">
-                <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="">
-                <h4>name</h4>
+                <img src="https://product.hstatic.net/200000343865/product/15_7a6c22cd833a49bea40359d5dba74f30_master.jpg" alt="">
+                <h4>One - Punch Man - Tập 15</h4>
                 <div class="rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -157,36 +239,136 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
                 </div>
-                <p>cost</p>
+                <p>22,500₫</p>
             </div>
+            <a href="./manga"><h3><u>View more</u></h3></a>
+        </div>
+        <!--  -->
+        <h2 class="title">Light Novel</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://4.bp.blogspot.com/-c0MN3AGgCEc/WUaG1q3kUkI/AAAAAAAAap0/k-ohxm4x4FkRmY1AuO_ZxF6IDz2edaW8QCHMYCw/default.jpeg" alt="">
+                <h4>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>40,500₫</p>
+            </div>
+            <div class="col-4">
+                <img src="https://i.docln.net/lightnovel/covers/s12686-f7291644-b5a2-4d0c-9fd2-9589b9327534-m.jpg" alt="">
+                <h4> "Violet Evergarden</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>27,000₫</p>
+            </div>
+            <div class="col-4">
+                <img src="https://i.docln.net/lightnovel/covers/s5130-ef568249-533f-4ad8-8949-ea0a6faf63a7-m.jpg" alt="">
+                <h4>Date A Live Fragment: Date A Bullet</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>22,500₫</p>
+            </div>
+            <div class="col-4">
+                <img src="https://3.bp.blogspot.com/-zIsnP1ylDVQ/WO29I_x1fOI/AAAAAAAAMP0/S_A5sIeAs58/w215/book_2108.jpg" alt="">
+                <h4>No Game No Life</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>22,500₫</p>
+            </div>
+            <a href="./Light-novel"><h3><u>View more</u></h3></a>
         </div>
     </div>
+    <!--  -->
+    
     <!--  -->
     <div class="offer">
         <div class="small-contanter">
             <div class="row">
                 <div class="col-2">
-                    <img src="./image/2aab1b0cc21b70c67140f47226c0182f.png" alt="offer-img">
                 </div>
                 <div class="col-2">
                     <p></p>
                     <h1></h1>
                     <small></small>
-                    <a href="" class="btn">Buy Now &#8594;</a>
                 </div>
             </div>
         </div>
     </div>
     <!--  -->
-    <div class="testimonial">
+    <!--  -->
+    <div class="bards">
         <div class="small-container">
             <div class="row">
-                <div class="col-3">
-                    <p></p>
+                <div class="col-5">
+                    <img src="https://product.hstatic.net/200000343865/product/16_4a35ec51ab1a4c02bc314cc42915757c_master.jpg" alt="">
                 </div>
-                <div>
-                    <img src="./image/800px-Makoto_Shinkhai_in_Moscow.png" alt="">
-                <h3>Shinkai Makoto</h3>
+                <div class="col-5">
+                    <img src="https://product.hstatic.net/200000343865/product/1_c3cc7800dd804a07bcb75c2c1f3a8f0f_master.jpg" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="https://product.hstatic.net/200000343865/product/70_e8ed153697144ac68f67e3343f8b20b8_master.jpg" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="https://product.hstatic.net/200000343865/product/19_14726316fc714c3e923c4656878fe33a_master.jpg" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <a href="https://www.youtube.com/watch?v=OUhvIXmKmTw&list=PLcumrhZcexibKmWFyf-Ip40MkblXASRZP" target="_blank">
+                <img src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/211866608_203502538448320_5031482691250247664_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=HvA3P5CFf6QAX9uuesG&_nc_ht=scontent.fhan2-3.fna&oh=00_AT8WwKvemaaF80CM55YkZXSDMeD7RqaRtB-Avi4Jnokr2Q&oe=62CFF37D" width="200px">
+                </a>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
                 </div>
             </div>
         </div>
